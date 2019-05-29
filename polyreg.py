@@ -5,11 +5,13 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 
-#
+# creates a sine function with 500 points and some noise
 np.random.seed(0)
 points = 500
 X = np.linspace(-3, 3, points)
 y = np.sin(X) + np.random.uniform(-0.5, 0.5, points)
+plt.scatter(X, y)
+plt.show()
 
 # creates a model with 2 hidden layers adam optimizer and MSE and trains for 50 epochs
 model = Sequential()
